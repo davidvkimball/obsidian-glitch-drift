@@ -1,0 +1,119 @@
+/* Glitch Drift - Real-time text glitch effect animations */
+
+:root {
+	--glitch-intensity: 50%;
+}
+
+/* Glitch keyframe animation - character displacement and color shift */
+@keyframes glitch-drift {
+	0% {
+		text-shadow:
+			-2px 0 #ff00de,
+			2px 0 #00ffff,
+			0 0 0 rgba(255, 0, 222, 0.3);
+		transform: translate(0);
+		opacity: 1;
+	}
+	20% {
+		text-shadow:
+			-2px 0 #ff00de,
+			2px 0 #00ffff,
+			0 0 0 rgba(255, 0, 222, 0.3);
+		transform: translate(-1px, 1px);
+	}
+	40% {
+		text-shadow:
+			2px 0 #ff00de,
+			-2px 0 #00ffff,
+			0 0 0 rgba(0, 255, 255, 0.3);
+		transform: translate(1px, -1px);
+	}
+	60% {
+		text-shadow:
+			-2px 0 #ff00de,
+			2px 0 #00ffff,
+			0 0 0 rgba(255, 0, 222, 0.3);
+		transform: translate(-1px, 0);
+	}
+	80% {
+		text-shadow:
+			2px 0 #ff00de,
+			-2px 0 #00ffff,
+			0 0 0 rgba(0, 255, 255, 0.3);
+		transform: translate(0, 1px);
+	}
+	100% {
+		text-shadow:
+			-2px 0 #ff00de,
+			2px 0 #00ffff,
+			0 0 0 rgba(255, 0, 222, 0.3);
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+/* Subtle glitch - lower intensity */
+@keyframes glitch-drift-subtle {
+	0% {
+		text-shadow:
+			-1px 0 rgba(255, 0, 222, 0.5),
+			1px 0 rgba(0, 255, 255, 0.5);
+		transform: translate(0);
+	}
+	50% {
+		text-shadow:
+			1px 0 rgba(255, 0, 222, 0.5),
+			-1px 0 rgba(0, 255, 255, 0.5);
+		transform: translate(0.5px, 0.5px);
+	}
+	100% {
+		text-shadow:
+			-1px 0 rgba(255, 0, 222, 0.5),
+			1px 0 rgba(0, 255, 255, 0.5);
+		transform: translate(0);
+	}
+}
+
+/* Intense glitch - high intensity */
+@keyframes glitch-drift-intense {
+	0% {
+		text-shadow:
+			-3px 0 #ff00de,
+			3px 0 #00ffff,
+			0 0 5px rgba(255, 0, 222, 0.6);
+		transform: translate(-2px, -2px);
+	}
+	25% {
+		text-shadow:
+			3px 0 #ff00de,
+			-3px 0 #00ffff,
+			0 0 5px rgba(0, 255, 255, 0.6);
+		transform: translate(2px, 2px);
+	}
+	50% {
+		text-shadow:
+			-3px 0 #ff00de,
+			3px 0 #00ffff,
+			0 0 5px rgba(255, 0, 222, 0.6);
+		transform: translate(-2px, 2px);
+	}
+	75% {
+		text-shadow:
+			3px 0 #ff00de,
+			-3px 0 #00ffff,
+			0 0 5px rgba(0, 255, 255, 0.6);
+		transform: translate(2px, -2px);
+	}
+	100% {
+		text-shadow:
+			-3px 0 #ff00de,
+			3px 0 #00ffff,
+			0 0 5px rgba(255, 0, 222, 0.6);
+		transform: translate(0);
+	}
+}
+
+/* Glitch text styling - applied to active line only */
+.cm-line.glitch-drift {
+	animation: glitch-drift 0.2s ease-out;
+}

@@ -1,0 +1,11 @@
+{
+	"id": "glitch-drift",
+	"name": "Glitch Drift",
+	"version": "0.0.1",
+	"minAppVersion": "1.11.0",
+	"description": "Apply glitch and distortion effects to selected text.",
+	"author": "David V. Kimball",
+	"authorUrl": "https://davidvkimball.com",
+	"fundingUrl": "https://patreon.com/davidvkimball",
+	"isDesktopOnly": true
+}
